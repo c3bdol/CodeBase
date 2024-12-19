@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CodeBase</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="userInput" required>
+            </div>
+            <div class="input-box" id="password">
+                <input type="password" placeholder="Password" required id="passwordInput">
+                <img id="passEye" src="https://img.icons8.com/?size=25&id=85329&format=png&color=ffffff" alt="">
+            </div>
+            <div class="remember-forget">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+
+            <!-- CAPTCHA -->
+            <div id="captchaContainer">
+                <canvas id="captchaCanvas" width="200" height="60"></canvas>
+                <button type="button" id="refreshCaptcha" class="btn">Refresh</button>
+            </div>
+            <div class="input-box">
+                <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" required>
+            </div>
+            <div id="message"></div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function generateCaptchaText() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return captcha;
+        }
+
+        // Function to draw CAPTCHA on canvas
+        function drawCaptcha(captchaText) {
+            const canvas = document.getElementById('captchaCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw background
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Add random lines for noise
+            for (let i = 0; i < 20; i++) {
+                ctx.strokeStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`;
+                ctx.beginPath();
+                ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.stroke();
+            }
+
+            // Draw CAPTCHA text
+            ctx.font = '30px Arial';
+            ctx.fillStyle = '#333';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(captchaText, canvas.width / 2, canvas.height / 2);
+
+            // Add random dots for noise
+            for (let i = 0; i < 100; i++) {
+                ctx.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`;
+                ctx.beginPath();
+                ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 2, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+
+        // Initialize CAPTCHA
+        let currentCaptcha = generateCaptchaText();
+        drawCaptcha(currentCaptcha);
+
+        // Refresh CAPTCHA
+        document.getElementById('refreshCaptcha').addEventListener('click', function () {
+            currentCaptcha = generateCaptchaText();
+            drawCaptcha(currentCaptcha);
+        });
+
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+            const userInput = document.getElementById('captchaInput').value;
+
+            if (userInput === currentCaptcha) {
+                document.getElementById('message').textContent = 'CAPTCHA validated successfully!';
+                document.getElementById('message').style.color = 'green';
+                window.location.href = "http://127.0.0.1:5500/codebase.html";
+            } else {
+                document.getElementById('message').textContent = 'Incorrect CAPTCHA. Please try again.';
+                document.getElementById('message').style.color = 'red';
+                currentCaptcha = generateCaptchaText();
+                drawCaptcha(currentCaptcha);
+                document.getElementById('captchaInput').value = '';
+            }
+        });
+
+        const passwordEye = document.getElementById('passEye');
+        const passwordInput = document.getElementById('passwordInput');
+
+        passwordEye.addEventListener('click', () => {
+            const isPasswordVisible = passwordInput.type === 'text';
+            passwordInput.type = isPasswordVisible ? 'password' : 'text';
+            passwordEye.src = isPasswordVisible ? 'https://img.icons8.com/?size=25&id=85329&format=png&color=ffffff'
+                : 'https://img.icons8.com/?size=25&id=121557&format=png&color=ffffff';
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+header {
+    height: 8em;
+}
+
+ul {
+    list-style: none;
+}
+
+.title {
+    background-color: #2b2bf0;
+    height: 100%;
+}
+
+.title h1 {
+    display: flex;
+    justify-content: flex-end;
+    color: aliceblue;
+    padding-top: 40px;
+    padding-right: 100px;
+}
+
+.iframecon {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.iframecon iframe {
+    width: 60em;
+    height: 30em;
+    margin-top: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 8px 8px 50px #2b2bf0;
+    border: 3px solid #444443;
+}
+
+.content {
+    margin-top: 50px;
+    border: 2px solid gray;
+}
+
+.text {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text h1 {
+    font-size: 2rem;
+    color: #2b2bf0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.text ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.text ul li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+    padding-left: 5px;
+    position: relative;
+}
+
+.text ul li::before {
+    content: '✔';
+    color: #007bff;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+.text ul li:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.quiztext {
+    margin-top: 30px;
+}
+
+.quiztext h3 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.bttn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #fff;
+    height: 4em;
+    width: 10em;
+    margin: 20px;
+    border: 2px solid #2b2bf0;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s;
+
+}
+
+.btn:hover {
+    background-color: #2b2bf0;
+    transition: all 0.5s ease;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

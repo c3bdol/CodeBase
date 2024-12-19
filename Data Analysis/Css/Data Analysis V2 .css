@@ -1,0 +1,988 @@
+   /*   ##############   Universal Style   ###############   */
+
+   * {
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       padding: 0;
+
+   }
+
+   /*   ##############   Fonts   ###############   */
+
+   @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+   /*   ###############   CSS Variables   ###############   */
+
+   :root {
+       --maincolor: #2b2bf0;
+       --secondcolor: #242323;
+       --therdcolor: #fcfafa;
+       ---p_color: #444443;
+       --images-wedth: 380px;
+       --images-height: 202px;
+   }
+
+   html {
+       scroll-behavior: smooth;
+   }
+
+   body {
+       overflow-x: hidden;
+
+       font-family: "Nunito", sans-serif;
+   }
+
+   ul {
+       list-style: none;
+   }
+
+   p {
+       font-size: 1.2em;
+       line-height: 1.8;
+       color: var(--secondcolor);
+       margin: 20px;
+       font-family: "Nunito", sans-serif;
+   }
+
+   h2 {
+       text-align: center;
+       color: var(--maincolor);
+       font-size: 2em;
+       margin-bottom: 20px;
+       font-family: "Playfair Display", serif;
+   }
+
+   /*   ###############   Nav Bare   ###############   */
+
+   .Container {
+       display: flex;
+       justify-content: center;
+
+   }
+
+   nav {
+
+       display: flex;
+       justify-content: space-between;
+       box-shadow: 5px 5px 40px;
+       width: 100%;
+       border-radius: 10px;
+       height: 5.5em;
+       font-family: "Montserrat", sans-serif;
+       font-weight: 700;
+       z-index: 1;
+       margin-bottom: 20px;
+       padding-left: 9px;
+
+       .logo {
+
+           width: 70px;
+           padding-top: 8px;
+           margin-left: 58px;
+       }
+
+       ul {
+           display: flex;
+           margin-right: 35px;
+           justify-content: center;
+           padding-top: -1px;
+
+           li {
+               margin: 10px;
+               list-style-type: none;
+               padding: 10px;
+
+               a {
+                   text-decoration: none;
+                   color: #000;
+                   transition: all 0.5s;
+               }
+           }
+
+           a:hover {
+               transition: all 0.5s;
+               font-size: larger;
+               color: #2b2bf0;
+           }
+       }
+
+       .navBtn {
+           background-color: #fff;
+           height: 3.3em;
+           width: 8.8em;
+           margin: 20px;
+           border: 2px solid #2b2bf0;
+           outline: none;
+           border-radius: 10px;
+           padding: 10px;
+           transition: all 0.5s;
+
+           a {
+               text-decoration: none;
+               color: #2b2bf0;
+               font-family: "Nunito", sans-serif;
+               font-weight: 700;
+               letter-spacing: 0.5px;
+
+           }
+       }
+
+       .navBtn:hover {
+           background-color: #2b2bf0;
+           transition: all 0.5s ease;
+           color: #fff;
+           border: none;
+           cursor: pointer;
+
+           a {
+               color: #fff;
+
+           }
+       }
+   }
+
+   header .container .link a.ch {
+       color: var(--maincolor);
+       font-size: larger;
+   }
+
+   /*   ##############   Landing   ###############   */
+
+   .landing {
+       position: relative;
+       height: 105vh;
+       background-image: url(../Pic/landing.jpg);
+       background-repeat: no-repeat;
+       background-size: contain;
+       margin-bottom: -15px;
+   }
+
+   .landingContent {
+       position: absolute;
+       left: 0;
+       top: 50%;
+       transform: translateY(-50%);
+       max-width: 50%;
+       padding: 50px;
+       direction: ltr;
+       padding: 60px;
+   }
+
+   .landing .landingContent h1 {
+       text-align: start;
+       margin-top: -30px;
+       color: whitesmoke;
+       margin-bottom: 15px;
+   }
+
+   .landing .landingContent p {
+       text-align: start;
+       color: whitesmoke;
+       font-size: 20px;
+   }
+
+   .main_headding {
+       padding: 80px;
+       text-align: center;
+
+   }
+
+   .main_headding h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   /*   ##############    Introduction   ##############   */
+   .Introduction {
+       background-color: #fff;
+       padding: 80px 20px;
+       /* Increased padding for a larger section */
+       margin: 50px auto;
+       max-width: 900px;
+       border-radius: 8px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       padding-top: 50px;
+   }
+
+   .Introduction_heading h1 {
+       text-align: center;
+       color: #3a10e1;
+       font-size: 2em;
+       margin-bottom: 20px;
+   }
+
+   .IntroductionContent>p {
+       margin-bottom: 20px;
+   }
+
+   .IntroductionContent {
+       font-size: 18px;
+       color: #333;
+       line-height: 1.6;
+       display: flex;
+       flex-wrap: wrap;
+       /* Ensures responsiveness */
+       gap: 20px;
+   }
+
+   .IntroductionContent>p {
+       flex: 2;
+       /* Makes the paragraph take more width */
+       margin: 0;
+   }
+
+   .skills-and-card {
+       display: flex;
+       flex-wrap: wrap;
+       /* Ensures responsiveness */
+       gap: 20px;
+       /* Adds spacing between skills and card */
+   }
+
+   .skills {
+       margin-top: 30px;
+       flex: 2;
+   }
+
+   .skills h3 {
+       font-size: 24px;
+       color: #444;
+       margin-bottom: 15px;
+   }
+
+   .skills ul {
+       list-style-type: none;
+   }
+
+   .skills ul li {
+       font-size: 16px;
+       margin-bottom: 10px;
+       padding-left: 20px;
+       position: relative;
+   }
+
+   .skills ul li::before {
+       content: '✔';
+       position: absolute;
+       left: 0;
+       color: #2b2bf0;
+   }
+
+   .Introduction_video {
+       flex: 1;
+       /* Card takes less space compared to key skills */
+       display: flex;
+       align-items: flex-start;
+   }
+
+   .cardformatExel:hover {
+       transform: translateY(-5px);
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   /*   ##############   Excel   ###############   */
+   .Excel {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .Excel_heading {
+       padding: 80px;
+       text-align: center;
+       padding-bottom: 30px;
+   }
+
+   .Excel_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   .Excel_Videos {
+       margin-top: 65px;
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+       grid-gap: 33px;
+       margin-bottom: 90px;
+       padding-bottom: 50px;
+       padding-left: 22px;
+       margin-right: 21px;
+
+   }
+
+   .cardformatExel {
+       background-color: #fff;
+       width: 350px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+
+   }
+
+   .cardformatExel:hover {
+       transform: translateY(-5px);
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 350px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 350px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   /*   ###############   Python   ###############    */
+   .Python {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .Python_heading {
+       padding: 80px;
+       text-align: center;
+   }
+
+   .Python_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   .PythonContent {
+       margin-top: 65px;
+       display: flex;
+       justify-content: center;
+       padding-left: 22px;
+       margin-bottom: -120px;
+   }
+
+   .Python_video {
+       margin-bottom: 50px;
+       padding-bottom: 75px;
+       margin-top: -40px;
+       margin-right: 10px;
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   /*   ###############   SQL   ###############   */
+   .SQL {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .SQL_heading {
+       padding: 80px;
+       text-align: center;
+   }
+
+   .SQL_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   .SQLContent {
+       margin-top: 65px;
+       display: flex;
+       justify-content: center;
+       padding-left: 22px;
+       margin-bottom: -120px;
+   }
+
+   .SQL_video {
+       margin-bottom: 50px;
+       padding-bottom: 75px;
+       margin-top: -40px;
+       margin-right: 10px;
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   /*   ###############   Statistics & Mathematics   ###############   */
+   .StatisticsANDMathematics {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .StatisticsANDMathematics_heading {
+       text-align: center;
+   }
+
+   .StatisticsANDMathematics_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       font-family: "Playfair Display", serif;
+   }
+
+   .StatisticsANDMathematicsContent {
+       margin-top: -65px;
+       display: flex;
+       justify-content: center;
+       margin-bottom: 90px;
+       padding-bottom: 50px;
+       padding-left: 22px;
+   }
+
+
+
+   .Statistics_videos {
+       margin-top: -65px;
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+       grid-gap: 50px;
+       margin-bottom: 90px;
+       padding-bottom: 50px;
+       padding-left: 60px;
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   .Mathematics_heading {
+       padding-top: 2px;
+   }
+
+   .Mathematics_videos {
+       display: flex;
+       /* Enables Flexbox */
+       justify-content: center;
+       /* Centers the cards horizontally */
+       gap: 50px;
+       /* Adds spacing between the cards */
+       flex-wrap: wrap;
+       /* Ensures the cards wrap to the next line on smaller screens */
+       margin: 65px 0;
+       padding-bottom: 50px;
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   /*   ###############   Data visualization   ###############   */
+   .DataVisualization {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .DataVisualization_heading {
+       padding: 50px;
+       text-align: center;
+   }
+
+   .DataVisualization_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   .DataVisualizationContent {
+       margin-top: 65px;
+       display: flex;
+       justify-content: center;
+       margin-bottom: 90px;
+       padding-bottom: 50px;
+       padding-left: 22px;
+   }
+
+   .Tableau {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .Tableau_heading {
+       padding: 50px;
+       text-align: center;
+   }
+
+   .Tableau_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   .TableauContent {
+       margin-top: 65px;
+       display: flex;
+       justify-content: center;
+       margin-bottom: 90px;
+       padding-bottom: 50px;
+       padding-left: 22px;
+   }
+
+   .Tableau_video {
+       margin-bottom: 50px;
+       padding-bottom: 75px;
+       margin-top: -40px;
+       margin-right: 10px;
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   .PowerBI {
+       background-color: var(--therdcolor);
+       margin-bottom: 35px;
+   }
+
+   .PowerBI_heading {
+       padding: 50px;
+       text-align: center;
+   }
+
+   .PowerBI_heading h1 {
+       color: var(--maincolor);
+       font-size: 50px;
+       position: relative;
+       margin-top: -59px;
+       font-family: "Playfair Display", serif;
+   }
+
+   .PowerBIContent {
+       margin-top: 65px;
+       display: flex;
+       justify-content: center;
+       margin-bottom: 90px;
+       padding-bottom: 50px;
+       padding-left: 22px;
+   }
+
+   .PowerBI_video {
+       margin-bottom: 50px;
+       padding-bottom: 75px;
+       margin-top: -40px;
+       margin-right: 10px;
+   }
+
+   .cardformat {
+       background-color: #fff;
+       width: 380px;
+       border-radius: 10px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       overflow: hidden;
+       transition: transform 0.3s;
+   }
+
+   .cardformat:hover {
+       transform: translateY(-5px);
+   }
+
+   .card-image img {
+       width: var(--images-wedth);
+       height: var(--images-height);
+   }
+
+   .card-content {
+       padding: 20px;
+   }
+
+   .card-content h3 {
+       font-size: 1.1rem;
+       color: #333;
+       margin-bottom: 10px;
+   }
+
+   .card-content p {
+       font-size: 0.9rem;
+       color: #777;
+       margin-bottom: 15px;
+   }
+
+   .footer {
+       background-color: #333;
+       color: #ecf0f1;
+       text-align: center;
+       padding: 20px;
+       font-family: "Montserrat", sans-serif;
+       position: relative;
+       font-size: 14px;
+       line-height: 1.6;
+
+       pre {
+           font-size: 18px;
+           font-weight: bold;
+           color: #007acc;
+           margin: 0;
+           text-shadow: 3px 3px 5px #3333c7;
+       }
+
+       ul {
+           list-style-type: none;
+           padding: 0;
+           margin: 10px 0 15px 0;
+
+       }
+
+       ul li {
+           display: inline-block;
+           margin: 0 10px;
+           font-size: 16px;
+           color: #ecf0f1;
+           transition: all 0.5s ease;
+       }
+
+       ul li:hover {
+           color: #007acc;
+           border-bottom: 1px solid #007acc;
+       }
+
+       p {
+           margin: 10px 0;
+           color: #bdc3c7;
+       }
+
+       .thanks {
+           font-size: 16px;
+           font-weight: bold;
+           color: #e4412f;
+           margin-top: 15px;
+       }
+   }
+
+   .footer {
+       background-color: #333;
+       color: #ecf0f1;
+       text-align: center;
+       padding: 20px;
+       font-family: "Montserrat", sans-serif;
+       position: relative;
+       font-size: 14px;
+       line-height: 1.6;
+
+       pre {
+           font-size: 18px;
+           font-weight: bold;
+           color: #007acc;
+           margin: 0;
+           text-shadow: 3px 3px 5px #3333c7;
+       }
+
+       ul {
+           list-style-type: none;
+           padding: 0;
+           margin: 10px 0 15px 0;
+
+       }
+
+       ul li {
+           display: inline-block;
+           margin: 0 10px;
+           font-size: 16px;
+           color: #ecf0f1;
+           transition: all 0.5s ease;
+       }
+
+       ul li:hover {
+           color: #007acc;
+           border-bottom: 1px solid #007acc;
+       }
+
+       p {
+           margin: 10px 0;
+           color: #bdc3c7;
+       }
+
+       .thanks {
+           font-size: 16px;
+           font-weight: bold;
+           color: #e4412f;
+           margin-top: 15px;
+       }
+   }
+
+   /* Responsive Footer Design */
+   @media (max-width: 768px) {
+       footer {
+           padding: 15px;
+           font-size: 0.9em;
+       }
+
+       footer ul li {
+           font-size: 0.9em;
+       }
+
+       footer pre {
+           font-size: 1em;
+       }
+   }
+
+   .test {
+       background-color: #fff;
+       height: 3.3em;
+       width: 8.8em;
+       margin: 20px;
+       border: 2px solid #2b2bf0;
+       outline: none;
+       border-radius: 10px;
+       padding: 10px;
+       transition: all 0.5s;
+
+       a {
+           text-decoration: none;
+           color: #2b2bf0;
+           font-family: "Nunito", sans-serif;
+           font-weight: 700;
+           letter-spacing: 0.5px;
+
+       }
+   }
+
+   .test:hover {
+       background-color: #2b2bf0;
+       transition: all 0.5s ease;
+       color: #fff;
+       border: none;
+       cursor: pointer;
+
+       a {
+           color: #fff;
+
+       }
+   }
